@@ -24,11 +24,12 @@ Nossos critérios de avaliação se baseiam e 3 grandes áreas, sendo elas:
 - Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto;
 - Exibir dados reais obtidos a partir da API `https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData`;
 - Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
+- Bônus: Utilizar alguma blioteca ou framework (Exs: Tailwind, Bootstrap, React, Angular, etc);
 
 ### ○ Pleno
 
 - Todos os requisitos exigidos para o nível Junior;
-- Fazer uso de alguma biblioteca front-end ou framework (react ou angular por exemplo);
+- Fazer uso de alguma biblioteca front-end ou framework (React ou Angular);
 - Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
 
 ### ○ Sênior
