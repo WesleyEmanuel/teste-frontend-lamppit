@@ -1,7 +1,6 @@
 <div class="container">
     <h1 class="title">Renda Fixa</h1>
-
-    <div class="info-cards">
-        <div class="card"></div>
-    </div>
+    @if(rendasFixas.snapshotByPortfolio){
+        <app-balanco-geral-cards [balancoGeral]="rendasFixas.snapshotByPortfolio"></app-balanco-geral-cards>
+    }
 </div>

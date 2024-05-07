@@ -1,0 +1,14 @@
+<div class="cards-container">
+    @for(card of cards; track $index){
+        <div class="card">
+            <div class="content">
+                <span class="label">
+                    {{card.label}}
+                </span>
+                <span class="value">
+                    {{card.value}}
+                </span>
+            </div>
+        </div>
+    }
+</div>
