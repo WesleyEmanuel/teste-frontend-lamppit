@@ -1,0 +1,98 @@
+<div class="card-table">
+    <div class="header">
+        <h2>Minhas Rendas Fixas</h2>
+        <div class="filter">
+            <div class="order-select">
+                <select name="order" id="order">
+                    <option value="1">Ordenar por</option>
+                    <option value="2">Nome</option>
+                    <option value="3">Valor</option>
+                    <option value="4">Rentabilidade</option>
+                    <option value="5">Vencimento</option>
+                </select>
+            </div>
+            <div class="search-input">
+                <i class="pi pi-search"></i>
+                <input type="text" [(ngModel)]="search">
+            </div>
+        </div>
+    </div>
+    <p-table 
+        [value]="filteredRendasFixas(search)" 
+        styleClass="p-datatable-striped" 
+        [tableStyle]="{'min-width': '50rem'}"
+        [paginator]="true"
+        [rows]="3"
+    >
+        <ng-template pTemplate="body" let-renda>
+            <tr>
+                <td>
+                    <div class="card titulo">
+                        <div class="top">
+                            <span>título</span>
+                            <i class="pi pi-info-circle"></i>
+                        </div>
+                        <div class="content">
+                            <span>{{renda.fixedIncome.name}}</span>
+                            <div class="right">
+                                <div class="tipo-titulo">
+                                    <span class="label">classe</span>
+                                    
+                                    <span class="value">{{renda.fixedIncome.bondType}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card resultado">
+                        <div class="top">
+                            <span>resultado</span>
+                            <i class="pi pi-info-circle"></i>
+                        </div>
+                        <div class="content">
+                            <div class="item">
+                                <span class="label">Valor inves.</span>
+                                <span class="value">{{renda.position.valueApplied | currency:'BRL'}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">Saldo bruto</span>
+                                <span class="value">{{renda.position.equity | currency:'BRL'}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">Rent.</span>
+                                <span class="value">{{renda.position.profitability | percent}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">% da cart.</span>
+                                <span class="value">{{renda.position.portfolioPercentage | currency:'BRL'}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">CDI</span>
+                                <span class="value">{{renda.position.indexerValue}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">Sobre CDI</span>
+                                <span class="value">{{renda.position.percentageOverIndexer}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card vencimento">
+                        <div class="top">
+                            <span>vencimento</span>
+                            <i class="pi pi-info-circle"></i>
+                        </div>
+                        <div class="content">
+                            <div class="item">
+                                <span class="label">Data venc.</span>
+                                <span class="value value-vencimento">{{renda.due.date}}</span>
+                            </div>
+                            <div class="item">
+                                <span class="label">Dias até venc.</span>
+                                <span class="value">{{renda.due.daysUntilExpiration}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
