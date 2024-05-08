@@ -101,7 +101,8 @@
     }
 
     .titulo {
-      width: 380px;
+      width: 100%;
+      max-width: 500px;
       .content {
         .right {
           width: 300px;
@@ -127,7 +128,7 @@
 
     .resultado {
       width: 100%;
-      max-width: 700px;
+      min-width: 550px;
       overflow-x: auto;
       .content {
         .value {
@@ -137,11 +138,38 @@
     }
 
     .vencimento {
-      width: 210px;
+      width: 100%;
       .content {
         .value {
           color: #81c4e3;
         }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1200px) {
+//   td{
+//     .titulo{
+//       width: 380px !important;
+//     }
+//     .resultado{
+//       min-width: 400px;
+//     }
+//     .vencimento{
+//       width: 230px !important;
+//     }
+//   }
+// }
+
+@media(max-width: 800px){
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    .filter{
+      flex-direction: column;
+      .order-select {
+        width: 300px !important;
       }
     }
   }
