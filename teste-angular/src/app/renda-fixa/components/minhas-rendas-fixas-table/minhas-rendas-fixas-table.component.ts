@@ -18,7 +18,13 @@ export class MinhasRendasFixasTableComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.filterAndOrderRendasFixas = this.rendasFixas.snapshotByProduct;
+    this.filterAndOrderRendasFixas = this.rendasFixas.dailyEquityByPortfolioChartData.map(
+      (renda: any) => {
+        return this.rendasFixas.snapshotByProduct.find(
+          (product: any) => product.fixedIncome.portfolioProductId === renda.portfolioProductId
+        ); 
+      }
+    );
   }
 
   filteredRendasFixas() {
@@ -32,7 +38,9 @@ export class MinhasRendasFixasTableComponent implements OnInit {
     } else {
       this.filterAndOrderRendasFixas = this.rendasFixas.snapshotByProduct;
     }
+  }
 
+  orderedRendasFixas() {
     switch (this.listOrder) {
       case '2':
         this.filterAndOrderRendasFixas.sort((a: any, b: any) => {

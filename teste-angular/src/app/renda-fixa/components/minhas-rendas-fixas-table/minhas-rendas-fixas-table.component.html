@@ -7,7 +7,7 @@
           name="order"
           id="order"
           [(ngModel)]="listOrder"
-          (change)="filteredRendasFixas()"
+          (change)="orderedRendasFixas()"
         >
           <option value="1">Ordenar por</option>
           <option value="2">Título</option>
@@ -29,7 +29,7 @@
     styleClass="p-datatable-striped"
     [tableStyle]="{ 'min-width': '50rem' }"
     [paginator]="true"
-    [rows]="3"
+    [rows]="5"
   >
     <ng-template pTemplate="body" let-renda>
       <tr>
