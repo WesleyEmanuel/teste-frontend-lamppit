@@ -1,146 +1,147 @@
-.card-table{
-    padding: 20px 0;
-    background-color: #fff;
-    border-radius: 10px;
+.card-table {
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
 
-    .header{
-        padding: 0 30px;
-        color: #888;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  .header {
+    padding: 0 30px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        .filter{
-            display: flex;
-            align-items: center;
-            gap: 20px;
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-            .order-select{
-                padding: 10px;
-                border: 1px solid #888;
-                border-radius: 10px;
-                width: 200px;
-                height: 40px;
-                
-                select{
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                    background-color: transparent;
-                }
-            }
-            
-            .search-input{
-                padding: 10px;
-                border: 1px solid #888;
-                border-radius: 10px;
-                width: 300px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                height: 40px;
+      .order-select {
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
 
-                .pi-search{
-                    font-weight: 700;
-                }
-
-                input{
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                }
-            }
+        select {
+          border: none;
+          outline: none;
+          width: 100%;
+          background-color: transparent;
         }
-    }
+      }
 
-    td{
+      .search-input {
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        width: 300px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-        padding: 30px;
-        overflow-x: auto;
+        gap: 10px;
+        height: 40px;
+
+        .pi-search {
+          font-weight: 700;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 30px;
+    overflow-x: auto;
+    font-size: 10px;
+
+    .card {
+      height: 110px;
+      border: 1px solid #888;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 12px;
+      }
 
-        .card{
-            height: 100px;
-            border: 1px solid #888;
-            border-radius: 10px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        font-size: 14px;
 
-            .top{
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
+        .item {
+          display: flex;
+          flex-direction: column;
 
-            .content{
-                display: flex;
-                justify-content: space-between;
-                align-items: end;
-                gap: 20px;
-                font-size: 14px;
+          .label {
+            font-size: 10px;
+          }
 
-                .item{
-                    display: flex;
-                    flex-direction: column;
-
-                    .label{
-                        font-size: 12px;
-                    }
-
-                    .value{
-                        font-weight: 600;
-                    }
-                }
-            }
+          .value {
+            font-weight: 600;
+          }
         }
-
-        .titulo{
-            width: 400px;
-            .content{
-                .right{
-                    width: 300px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: end;
-                }
-                .tipo-titulo{
-                    display: flex;
-                    flex-direction: column;
-
-                    .label{
-                        font-size: 12px;
-                    }
-
-                    .value{
-                        font-weight: 600;
-                        color: var(--main-purple)
-                    }
-                }
-            }
-        }
-
-        .resultado{
-            width: 500px;
-            overflow-x: auto;
-            .content{
-                .value{
-                    color: #52C7AC;
-                }
-            }
-        }
-
-        .vencimento{
-            width: 230px;
-            .content{
-                .value{
-                    color: #81c4e3;
-                }
-            }
-        }
+      }
     }
+
+    .titulo {
+      width: 380px;
+      .content {
+        .right {
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        }
+        .tipo-titulo {
+          display: flex;
+          flex-direction: column;
+
+          .label {
+            font-size: 10px;
+          }
+
+          .value {
+            font-weight: 600;
+            color: var(--main-purple);
+          }
+        }
+      }
+    }
+
+    .resultado {
+      width: 520px;
+      overflow-x: auto;
+      .content {
+        .value {
+          color: #52c7ac;
+        }
+      }
+    }
+
+    .vencimento {
+      width: 210px;
+      .content {
+        .value {
+          color: #81c4e3;
+        }
+      }
+    }
+  }
 }
