@@ -1,0 +1,18 @@
+<div class="graficos">
+  <div class="grafico-container carteira-tipos">
+    <h3 class="grafico-title">Divisão de Carteira por Tipos</h3>
+    <p-chart
+      type="doughnut"
+      [data]="carteiraTiposdata"
+      [options]="carteiraTiposoptions"
+    />
+  </div>
+  <div class="grafico-container carteira-titulos">
+    <h3 class="grafico-title">Divisão de Carteira por Título</h3>
+    <p-chart
+      type="doughnut"
+      [data]="carteiraTitulodata"
+      [options]="carteiraTitulooptions"
+    />
+  </div>
+</div>

@@ -1,9 +1,14 @@
 <div class="container">
-    <h1 class="title">Renda Fixa</h1>
-    
-    @if(rendasFixas.snapshotByPortfolio){
-        <app-balanco-geral-cards [balancoGeral]="rendasFixas.snapshotByPortfolio"/>
-    }
+  <h1 class="title">Renda Fixa</h1>
 
-    <app-minhas-rendas-fixas-table [rendasFixas]="rendasFixas"/>
+  @if(rendasFixas.snapshotByPortfolio){
+  <app-balanco-geral-cards [balancoGeral]="rendasFixas.snapshotByPortfolio" />
+  }
+
+  <app-minhas-rendas-fixas-table [rendasFixas]="rendasFixas" />
+
+  <app-graficos-carteira
+    [carteira]="rendasFixas.dailyEquityByPortfolioChartData"
+    [tiposProduto]="rendasFixas.snapshotByProduct"
+  ></app-graficos-carteira>
 </div>

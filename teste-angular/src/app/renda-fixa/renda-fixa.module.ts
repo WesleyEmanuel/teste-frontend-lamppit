@@ -7,18 +7,22 @@ import { BalancoGeralCardsComponent } from './components/balanco-geral-cards/bal
 import { MinhasRendasFixasTableComponent } from './components/minhas-rendas-fixas-table/minhas-rendas-fixas-table.component';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
+import { GraficosCarteiraComponent } from './components/graficos-carteira/graficos-carteira.component';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
   declarations: [
     RendaFixaComponent,
     BalancoGeralCardsComponent,
-    MinhasRendasFixasTableComponent
+    MinhasRendasFixasTableComponent,
+    GraficosCarteiraComponent,
   ],
   imports: [
     FormsModule,
     CommonModule,
     RendaFixaRoutingModule,
-    TableModule
-  ]
+    TableModule,
+    ChartModule,
+  ],
 })
-export class RendaFixaModule { }
+export class RendaFixaModule {}
